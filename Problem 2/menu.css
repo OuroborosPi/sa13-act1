@@ -1,9 +1,16 @@
-body {
-    font-family: 'Arial', sans-serif;
-    color: #444;
+/* Resetting default margins and paddings */
+html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    width: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column; /* Organizes the content in a column layout */
+    min-height: 100vh; /* Minimum height of 100% of the viewport height */
+    font-family: 'Arial', sans-serif; /* Default font */
 }
 
 header {
@@ -11,12 +18,14 @@ header {
     color: #fff;
     padding: 20px 0;
     text-align: center;
+    width: 100%;
 }
 
 main {
+    flex: 1; 
+    padding: 20px;
     max-width: 600px;
-    margin: 20px auto;
-    padding: 0 20px;
+    margin: 0 auto;
 }
 
 .menu-category h2 {
@@ -35,5 +44,10 @@ footer {
     color: #ffffff;
     text-align: center;
     padding: 10px 0;
-    margin-top: 20px;
+    width: 100%;
+}
+
+footer {
+    position: sticky;
+    bottom: 0;
 }
