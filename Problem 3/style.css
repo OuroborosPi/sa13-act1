@@ -1,0 +1,106 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    background-color: #1a82f7;
+    padding: 20px 0;
+}
+
+.navbar li {
+    padding: 0 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+/* Welcome section */
+#welcome {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+/* Gallery styles using Flexbox */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.gallery-item {
+    flex: 1 1 200px; /* Adjusts size but not smaller than 200px */
+    border: 1px solid #ddd;
+    padding: 10px;
+    transition: transform 0.2s; /* Smooth transition for hover effect */
+    text-align: center;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05); /* Slightly enlarges the item on hover */
+}
+
+/* Contact form styles */
+.contact-form {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.contact-form input[type="submit"] {
+    background-color: #1a82f7;
+    color: white;
+    cursor: pointer;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .gallery {
+        flex-direction: column;
+    }
+}
+
+.gallery-item img {
+    max-width: 100%; /* Makes sure the image is no wider than its container */
+    height: auto; /* Maintains the image's aspect ratio */
+    border-radius: 8px; /* Optional: Adds rounded corners to your images */
+}
+
+/* Ensures the gallery items have a uniform size, adjust as needed */
+.gallery-item {
+    width: calc(33.333% - 20px); /* Adjust width, subtracting the total gap */
+    margin-bottom: 15px; /* Optional: Adds some space below each item */
+}
+
+@media (max-width: 768px) {
+    .gallery-item {
+        width: calc(50% - 20px); /* Larger items for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-item {
+        width: 100%; /* Full width items for mobile screens */
+    }
+}
